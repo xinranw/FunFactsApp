@@ -14,13 +14,13 @@
 
 @implementation XIWMainViewController
 
-- (XIWFacebookDataManager *)mainModel
+- (XIWNumberDataManager *)mainManager
 {
-    if (!_mainModel) {
+    if (!_mainManager) {
         NSData *numberData = [XIWWebRequestManager dataFromString:DATA_URL];
-        _mainModel = [[XIWNumberDataModel alloc] initWithNSData:numberData];
+        _mainManager = [[XIWNumberDataManager alloc] initWithNSData:numberData];
     }
-    return _mainModel;
+    return _mainManager;
 }
 
 - (void)viewDidLoad
@@ -47,7 +47,7 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return 2;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -56,8 +56,8 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
     // Configure the cell...
-    UILabel *nameLabel = (id)[cell viewWithTag: 1];
-    nameLabel.text = [NSString stringWithFormat:@"Text: %@", self.mainModel.fullName];
+    UILabel *numberLabel = (id)[cell viewWithTag: 1];
+    numberLabel.text = [NSString stringWithFormat:@"Text: %@", self.mainManager.text];
 
     return cell;
 }
