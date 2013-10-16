@@ -24,6 +24,7 @@
 		CE2BD574180E128F00FBB425 /* XIWWebRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */; };
 		CE2BD577180E14EF00FBB425 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD576180E14EF00FBB425 /* Reachability.m */; };
 		CE2BD57A180E176D00FBB425 /* XIWFacebookDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */; };
+		CE2BD57D180E1DD500FBB425 /* XIWNumberDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD57C180E1DD500FBB425 /* XIWNumberDataModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		CE2BD576180E14EF00FBB425 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
 		CE2BD578180E176D00FBB425 /* XIWFacebookDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XIWFacebookDataManager.h; path = ../XIWFacebookDataManager.h; sourceTree = "<group>"; };
 		CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XIWFacebookDataManager.m; path = ../XIWFacebookDataManager.m; sourceTree = "<group>"; };
+		CE2BD57B180E1DD500FBB425 /* XIWNumberDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWNumberDataModel.h; sourceTree = "<group>"; };
+		CE2BD57C180E1DD500FBB425 /* XIWNumberDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWNumberDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +130,8 @@
 				CE2BD570180E0EA600FBB425 /* XIWMainViewController.m */,
 				CE2BD572180E128F00FBB425 /* XIWWebRequestManager.h */,
 				CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */,
+				CE2BD57B180E1DD500FBB425 /* XIWNumberDataModel.h */,
+				CE2BD57C180E1DD500FBB425 /* XIWNumberDataModel.m */,
 				CE2BD578180E176D00FBB425 /* XIWFacebookDataManager.h */,
 				CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */,
 				CE2BD575180E14EF00FBB425 /* Reachability.h */,
@@ -266,6 +271,7 @@
 			files = (
 				CE2BD54B180E0DAC00FBB425 /* main.m in Sources */,
 				CE2BD571180E0EA600FBB425 /* XIWMainViewController.m in Sources */,
+				CE2BD57D180E1DD500FBB425 /* XIWNumberDataModel.m in Sources */,
 				CE2BD54F180E0DAC00FBB425 /* XIWAppDelegate.m in Sources */,
 				CE2BD574180E128F00FBB425 /* XIWWebRequestManager.m in Sources */,
 				CE2BD57A180E176D00FBB425 /* XIWFacebookDataManager.m in Sources */,

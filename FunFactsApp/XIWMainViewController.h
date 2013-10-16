@@ -8,8 +8,9 @@
 
 #import <UIKit/UIKit.h>
 #import "XIWFacebookDataManager.h"
+#import "XIWNumberDataModel.h"
 
-#define FACEBOOK_URL @"http://graph.facebook.com/xinranw92"
+#define DATA_URL @"http://numbersapi.com/1..50/trivia?json"
 
 @interface XIWMainViewController : UITableViewController
 

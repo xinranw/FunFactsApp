@@ -17,8 +17,8 @@
 - (XIWFacebookDataManager *)mainModel
 {
     if (!_mainModel) {
-        NSData *profileData = [XIWWebRequestManager dataFromString:FACEBOOK_URL];
-        _mainModel = [[XIWFacebookDataManager alloc] initWithNSData:profileData];
+        NSData *numberData = [XIWWebRequestManager dataFromString:DATA_URL];
+        _mainModel = [[XIWNumberDataModel alloc] initWithNSData:numberData];
     }
     return _mainModel;
 }
@@ -57,12 +57,8 @@
     
     // Configure the cell...
     UILabel *nameLabel = (id)[cell viewWithTag: 1];
-    UILabel *usernameLabel = (id)[cell viewWithTag: 2];
-    UILabel *genderLabel = (id)[cell viewWithTag: 3];
-    nameLabel.text = [NSString stringWithFormat:@"Name: %@", self.mainModel.fullName];
-    usernameLabel.text = [NSString stringWithFormat:@"Username: %@", self.mainModel.username];
-    genderLabel.text = [NSString stringWithFormat:@"Gender: %@", self.mainModel.gender];
-    
+    nameLabel.text = [NSString stringWithFormat:@"Text: %@", self.mainModel.fullName];
+
     return cell;
 }
 

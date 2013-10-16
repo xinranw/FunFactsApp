@@ -10,7 +10,6 @@
 
 @implementation XIWWebRequestManager
 
-
 + (BOOL)doesHaveInternetConnection
 {
     //check for network access using Apple Reachability
