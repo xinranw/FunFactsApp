@@ -19,6 +19,11 @@
 		CE2BD55A180E0DAC00FBB425 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CE2BD542180E0DAC00FBB425 /* UIKit.framework */; };
 		CE2BD562180E0DAC00FBB425 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = CE2BD560180E0DAC00FBB425 /* InfoPlist.strings */; };
 		CE2BD564180E0DAC00FBB425 /* FunFactsAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD563180E0DAC00FBB425 /* FunFactsAppTests.m */; };
+		CE2BD56E180E0E2E00FBB425 /* Storyboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CE2BD56D180E0E2E00FBB425 /* Storyboard.storyboard */; };
+		CE2BD571180E0EA600FBB425 /* XIWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD570180E0EA600FBB425 /* XIWMainViewController.m */; };
+		CE2BD574180E128F00FBB425 /* XIWWebRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */; };
+		CE2BD577180E14EF00FBB425 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD576180E14EF00FBB425 /* Reachability.m */; };
+		CE2BD57A180E176D00FBB425 /* XIWFacebookDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +53,15 @@
 		CE2BD55F180E0DAC00FBB425 /* FunFactsAppTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FunFactsAppTests-Info.plist"; sourceTree = "<group>"; };
 		CE2BD561180E0DAC00FBB425 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		CE2BD563180E0DAC00FBB425 /* FunFactsAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FunFactsAppTests.m; sourceTree = "<group>"; };
+		CE2BD56D180E0E2E00FBB425 /* Storyboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Storyboard.storyboard; sourceTree = "<group>"; };
+		CE2BD56F180E0EA600FBB425 /* XIWMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWMainViewController.h; sourceTree = "<group>"; };
+		CE2BD570180E0EA600FBB425 /* XIWMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWMainViewController.m; sourceTree = "<group>"; };
+		CE2BD572180E128F00FBB425 /* XIWWebRequestManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWWebRequestManager.h; sourceTree = "<group>"; };
+		CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWWebRequestManager.m; sourceTree = "<group>"; };
+		CE2BD575180E14EF00FBB425 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
+		CE2BD576180E14EF00FBB425 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
+		CE2BD578180E176D00FBB425 /* XIWFacebookDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XIWFacebookDataManager.h; path = ../XIWFacebookDataManager.h; sourceTree = "<group>"; };
+		CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XIWFacebookDataManager.m; path = ../XIWFacebookDataManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +123,15 @@
 			children = (
 				CE2BD54D180E0DAC00FBB425 /* XIWAppDelegate.h */,
 				CE2BD54E180E0DAC00FBB425 /* XIWAppDelegate.m */,
+				CE2BD56F180E0EA600FBB425 /* XIWMainViewController.h */,
+				CE2BD570180E0EA600FBB425 /* XIWMainViewController.m */,
+				CE2BD572180E128F00FBB425 /* XIWWebRequestManager.h */,
+				CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */,
+				CE2BD578180E176D00FBB425 /* XIWFacebookDataManager.h */,
+				CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */,
+				CE2BD575180E14EF00FBB425 /* Reachability.h */,
+				CE2BD576180E14EF00FBB425 /* Reachability.m */,
+				CE2BD56D180E0E2E00FBB425 /* Storyboard.storyboard */,
 				CE2BD550180E0DAC00FBB425 /* Images.xcassets */,
 				CE2BD545180E0DAC00FBB425 /* Supporting Files */,
 			);
@@ -222,6 +245,7 @@
 			files = (
 				CE2BD549180E0DAC00FBB425 /* InfoPlist.strings in Resources */,
 				CE2BD551180E0DAC00FBB425 /* Images.xcassets in Resources */,
+				CE2BD56E180E0E2E00FBB425 /* Storyboard.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -241,7 +265,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				CE2BD54B180E0DAC00FBB425 /* main.m in Sources */,
+				CE2BD571180E0EA600FBB425 /* XIWMainViewController.m in Sources */,
 				CE2BD54F180E0DAC00FBB425 /* XIWAppDelegate.m in Sources */,
+				CE2BD574180E128F00FBB425 /* XIWWebRequestManager.m in Sources */,
+				CE2BD57A180E176D00FBB425 /* XIWFacebookDataManager.m in Sources */,
+				CE2BD577180E14EF00FBB425 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
