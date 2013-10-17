@@ -1,38 +1,38 @@
 //
-//  XIWMainViewController.m
+//  XIWDataViewController.m
 //  FunFactsApp
 //
-//  Created by User on 10/15/13.
+//  Created by User on 10/16/13.
 //  Copyright (c) 2013 Xinran Wang. All rights reserved.
 //
 
-#import "XIWMainViewController.h"
 #import "XIWDataViewController.h"
 
-@interface XIWMainViewController ()
+@interface XIWDataViewController ()
 
 @end
 
-@implementation XIWMainViewController
+@implementation XIWDataViewController
 
-- (XIWNumberDataManager *)mainManager
-{
-    if (!_mainManager) {
-        NSData *numberData = [XIWWebRequestManager dataFromString:DATA_URL];
-        _mainManager = [[XIWNumberDataManager alloc] initWithNSData:numberData];
-    }
-    return _mainManager;
-}
+@synthesize numberDataDictionary;
+@synthesize numberDataModel;
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    self.numberDataModel = [[XIWNumberDataModel alloc] initWithId:numberDataDictionary];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+- (void)didReceiveMemoryWarning
+{
+    [super didReceiveMemoryWarning];
+    // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
@@ -48,23 +48,28 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return [self.mainManager.numberDataArray count];
+    return 1;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"SummaryCell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
+    static NSString *CellIdentifier = @"NumberDataCell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
-    }
     // Configure the cell...
-    cell.textLabel.text = [[[self.mainManager getDataArray] objectAtIndex:indexPath.row] objectForKey:@"text"];
-    cell.textLabel.numberOfLines = 2;
+    UILabel *numberLabel = (id)[cell viewWithTag: 3];
+    numberLabel.text = [NSString stringWithFormat:@"Number: %@", self.numberDataModel.number];
+    
+    UILabel *foundLabel = (id)[cell viewWithTag: 4];
+    foundLabel.text = [NSString stringWithFormat:@"Found: %@", self.numberDataModel.found];
+    
+    UILabel *typeLabel = (id)[cell viewWithTag: 5];
+    typeLabel.text = [NSString stringWithFormat:@"Type: %@", self.numberDataModel.type];
+    
+    UILabel *textLabel = (id)[cell viewWithTag: 6];
+    textLabel.text = [NSString stringWithFormat:@"Text: %@", self.numberDataModel.text];
     
     return cell;
-    
 }
 
 /*
@@ -106,27 +111,16 @@
 }
 */
 
-
+/*
 #pragma mark - Navigation
 
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-
-    if ([[segue identifier] isEqualToString:@"ShowNumberDataDetails"])
-    {
-        // Get the new view controller using [segue destinationViewController].
-        XIWDataViewController *dataViewController = [segue destinationViewController];
-        NSIndexPath *myIndexPath = [self.tableView indexPathForSelectedRow];
-
-        // Pass the selected object to the new view controller.
-        NSDictionary *selectedNumberDictionary = [[self.mainManager getDataArray] objectAtIndex:[myIndexPath row]];
-        dataViewController.numberDataDictionary = [[NSMutableDictionary alloc] initWithDictionary: selectedNumberDictionary];
-    }
-    
-    
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
 
-
+ */
 
 @end

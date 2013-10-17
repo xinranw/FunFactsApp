@@ -11,14 +11,14 @@
 @implementation XIWNumberDataModel
 
 //designated initializer
-- (id)initWithId: (id *)numberId;
+- (id)initWithId: (NSMutableDictionary *)numberDataDictionary;
 {
     self = [super init];
     
-//    self.text = [numberId objectForKey:@"text"];
-//    self.number = [numberId objectForKey:@"number"];
-//    self.found = [numberId objectForKey:@"found"];
-//    self.type = [numberId objectForKey:@"type"];
+    self.text = [numberDataDictionary objectForKey:@"text"];
+    self.number = [numberDataDictionary objectForKey:@"number"];
+    self.found = [numberDataDictionary objectForKey: @"found"] ? @"true" : @"false";
+    self.type = [numberDataDictionary objectForKey:@"type"];
 
     return self;
 }

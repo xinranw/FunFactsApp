@@ -28,7 +28,6 @@
                                    atIndex:i];
     }
     
-    NSLog(@"%@", array);
     self.numberDataArray = array;
     
     return self;

@@ -23,8 +23,8 @@
 		CE2BD571180E0EA600FBB425 /* XIWMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD570180E0EA600FBB425 /* XIWMainViewController.m */; };
 		CE2BD574180E128F00FBB425 /* XIWWebRequestManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */; };
 		CE2BD577180E14EF00FBB425 /* Reachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD576180E14EF00FBB425 /* Reachability.m */; };
-		CE2BD57A180E176D00FBB425 /* XIWFacebookDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */; };
 		CE2BD57D180E1DD500FBB425 /* XIWNumberDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CE2BD57C180E1DD500FBB425 /* XIWNumberDataManager.m */; };
+		CEE4410D180F845800140750 /* XIWDataViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE4410C180F845800140750 /* XIWDataViewController.m */; };
 		CEE973F5180EFDC200E2EA46 /* XIWNumberDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = CEE973F4180EFDC200E2EA46 /* XIWNumberDataModel.m */; };
 /* End PBXBuildFile section */
 
@@ -62,10 +62,10 @@
 		CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWWebRequestManager.m; sourceTree = "<group>"; };
 		CE2BD575180E14EF00FBB425 /* Reachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Reachability.h; sourceTree = "<group>"; };
 		CE2BD576180E14EF00FBB425 /* Reachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Reachability.m; sourceTree = "<group>"; };
-		CE2BD578180E176D00FBB425 /* XIWFacebookDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XIWFacebookDataManager.h; path = ../XIWFacebookDataManager.h; sourceTree = "<group>"; };
-		CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XIWFacebookDataManager.m; path = ../XIWFacebookDataManager.m; sourceTree = "<group>"; };
 		CE2BD57B180E1DD500FBB425 /* XIWNumberDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWNumberDataManager.h; sourceTree = "<group>"; };
 		CE2BD57C180E1DD500FBB425 /* XIWNumberDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWNumberDataManager.m; sourceTree = "<group>"; };
+		CEE4410B180F845800140750 /* XIWDataViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = XIWDataViewController.h; path = ../XIWDataViewController.h; sourceTree = "<group>"; };
+		CEE4410C180F845800140750 /* XIWDataViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = XIWDataViewController.m; path = ../XIWDataViewController.m; sourceTree = "<group>"; };
 		CEE973F3180EFDC200E2EA46 /* XIWNumberDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XIWNumberDataModel.h; sourceTree = "<group>"; };
 		CEE973F4180EFDC200E2EA46 /* XIWNumberDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XIWNumberDataModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -131,14 +131,14 @@
 				CE2BD54E180E0DAC00FBB425 /* XIWAppDelegate.m */,
 				CE2BD56F180E0EA600FBB425 /* XIWMainViewController.h */,
 				CE2BD570180E0EA600FBB425 /* XIWMainViewController.m */,
+				CEE4410B180F845800140750 /* XIWDataViewController.h */,
+				CEE4410C180F845800140750 /* XIWDataViewController.m */,
 				CE2BD572180E128F00FBB425 /* XIWWebRequestManager.h */,
 				CE2BD573180E128F00FBB425 /* XIWWebRequestManager.m */,
 				CE2BD57B180E1DD500FBB425 /* XIWNumberDataManager.h */,
 				CE2BD57C180E1DD500FBB425 /* XIWNumberDataManager.m */,
 				CEE973F3180EFDC200E2EA46 /* XIWNumberDataModel.h */,
 				CEE973F4180EFDC200E2EA46 /* XIWNumberDataModel.m */,
-				CE2BD578180E176D00FBB425 /* XIWFacebookDataManager.h */,
-				CE2BD579180E176D00FBB425 /* XIWFacebookDataManager.m */,
 				CE2BD575180E14EF00FBB425 /* Reachability.h */,
 				CE2BD576180E14EF00FBB425 /* Reachability.m */,
 				CE2BD56D180E0E2E00FBB425 /* Storyboard.storyboard */,
@@ -280,7 +280,7 @@
 				CEE973F5180EFDC200E2EA46 /* XIWNumberDataModel.m in Sources */,
 				CE2BD54F180E0DAC00FBB425 /* XIWAppDelegate.m in Sources */,
 				CE2BD574180E128F00FBB425 /* XIWWebRequestManager.m in Sources */,
-				CE2BD57A180E176D00FBB425 /* XIWFacebookDataManager.m in Sources */,
+				CEE4410D180F845800140750 /* XIWDataViewController.m in Sources */,
 				CE2BD577180E14EF00FBB425 /* Reachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

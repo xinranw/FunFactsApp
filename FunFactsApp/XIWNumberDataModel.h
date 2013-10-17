@@ -11,7 +11,7 @@
 
 @interface XIWNumberDataModel : NSObject
 
-- (id)initWithId: (id *)numberId;
+- (id)initWithId: (NSMutableDictionary *)numberDataDictionary;
 
 @property (nonatomic, strong) NSString *text;
 @property (nonatomic, strong) NSString *number;

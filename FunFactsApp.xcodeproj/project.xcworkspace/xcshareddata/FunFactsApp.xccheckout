@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4CCDF9A5-E92C-4935-8220-7404D6C9728A</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FunFactsApp</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>6FE8AF70-A667-468A-86A6-1A36C4FFE32E</key>
+		<string>ssh://github.com/xinranw/FunFactsApp.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FunFactsApp.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>6FE8AF70-A667-468A-86A6-1A36C4FFE32E</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>ssh://github.com/xinranw/FunFactsApp.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>6FE8AF70-A667-468A-86A6-1A36C4FFE32E</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>6FE8AF70-A667-468A-86A6-1A36C4FFE32E</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FunFactsApp</string>
+		</dict>
+	</array>
+</dict>
+</plist>

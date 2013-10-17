@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XIWFacebookDataManager.h"
 #import "XIWNumberDataManager.h"
 
 #define DATA_URL @"http://numbersapi.com/1..50/trivia?json"
