@@ -17,25 +17,26 @@
     
     //perform a web request and then set our properties
     NSError *jsonError;
-    
     NSMutableDictionary *numberDictionary = [NSJSONSerialization JSONObjectWithData:numbersData
                                                                              options:NSJSONReadingMutableLeaves
                                                                                error:&jsonError];
-    for(id key in numberDictionary) {
-        NSMutableDictionary *value = [numberDictionary objectForKey:key];
-        NSLog(@"%@", [value objectForKey: @"text"]);
-        NSLog(@"%@", self.numberDataArray);
-//        TODO add dictionary for each number to array
-//        self.numberDataArray
-    }
-//    NSLog(@"%@", numberDictionary);
+    NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:[[numberDictionary allKeys] count]];
+
     
-    self.text = [numberDictionary objectForKey:@"text"];
-    self.number = [numberDictionary objectForKey:@"number"];
-    self.found = [numberDictionary objectForKey:@"found"];
-    self.type = [numberDictionary objectForKey:@"type"];
+    for ( NSUInteger i = 0; i < [[numberDictionary allKeys] count]; i++){
+        [array insertObject:[numberDictionary objectForKey: [NSString stringWithFormat:@"%d",i+1]]
+                                   atIndex:i];
+    }
+    
+    NSLog(@"%@", array);
+    self.numberDataArray = array;
     
     return self;
+}
+
+- (id)getDataArray
+{
+    return self.numberDataArray;
 }
 
 @end

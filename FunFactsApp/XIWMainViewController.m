@@ -47,19 +47,23 @@
 {
 #warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 2;
+    return [self.mainManager.numberDataArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    }
     // Configure the cell...
-    UILabel *numberLabel = (id)[cell viewWithTag: 1];
-    numberLabel.text = [NSString stringWithFormat:@"Text: %@", self.mainManager.text];
+    cell.textLabel.text = [[[self.mainManager getDataArray] objectAtIndex:indexPath.row] objectForKey:@"text"];
+    cell.textLabel.numberOfLines = 2;
 
     return cell;
+    
 }
 
 /*

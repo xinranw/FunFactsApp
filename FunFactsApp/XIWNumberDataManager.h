@@ -12,11 +12,8 @@
 @interface XIWNumberDataManager : NSObject
 
 - (id)initWithNSData: (NSData *)numbersData;
+- (id)getDataArray;
 
-@property (nonatomic, strong) NSString *text;
-@property (nonatomic, strong) NSString *number;
-@property (nonatomic, strong) NSString *found;
-@property (nonatomic, strong) NSString *type;
 @property (nonatomic, strong) NSMutableArray *numberDataArray;
 
 @end
