@@ -19,6 +19,15 @@
 {
     if (!_mainManager) {
         NSData *numberData = [XIWWebRequestManager dataFromString:DATA_URL];
+        if (!numberData){
+            UIAlertView *noConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                                        message:@"No valid internet connection detected. Please connect to the internet and try again."
+                                                                       delegate:self
+                                                              cancelButtonTitle:@"Ok"
+                                                              otherButtonTitles:nil, nil];
+            [noConnectionAlert show];
+            return nil;
+        }
         _mainManager = [[XIWNumberDataManager alloc] initWithNSData:numberData];
     }
     return _mainManager;
@@ -64,7 +73,6 @@
     cell.textLabel.numberOfLines = 2;
     
     return cell;
-    
 }
 
 /*

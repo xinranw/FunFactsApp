@@ -66,8 +66,25 @@
     UILabel *typeLabel = (id)[cell viewWithTag: 5];
     typeLabel.text = [NSString stringWithFormat:@"Type: %@", self.numberDataModel.type];
     
-    UILabel *textLabel = (id)[cell viewWithTag: 6];
-    textLabel.text = [NSString stringWithFormat:@"Text: %@", self.numberDataModel.text];
+//    UILabel *textLabel = (id)[cell viewWithTag: 6];
+//    textLabel.numberOfLines = 0;
+//    textLabel.text = [NSString stringWithFormat:@"Text: %@", self.numberDataModel.text];
+//    [textLabel sizeToFit];
+    
+    
+    CGRect screenRect = [[UIScreen mainScreen] bounds];
+    CGFloat labelWidth = screenRect.size.width - 40;
+    
+    // 20 point top and left margin. Sized to leave 20 pt at right.
+    CGRect labelFrame = CGRectMake(20, 140, labelWidth, 150);
+    UILabel *myLabel = [[UILabel alloc] initWithFrame:labelFrame];
+    
+    NSString *labelText = [NSString stringWithFormat:@"Text: %@", self.numberDataModel.text];
+    [myLabel setText:labelText];
+    // Tell the label to use an unlimited number of lines
+    [myLabel setNumberOfLines:0];
+    [myLabel sizeToFit];
+    [self.view addSubview:myLabel];
     
     return cell;
 }
