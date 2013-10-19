@@ -15,14 +15,13 @@
 {
     self = [super init];
     
-    //perform a web request and then set our properties
+    //Get the data and convert into a dictionary
     NSError *jsonError;
     NSMutableDictionary *numberDictionary = [NSJSONSerialization JSONObjectWithData:numbersData
                                                                              options:NSJSONReadingMutableLeaves
                                                                                error:&jsonError];
+    //Convert the dictionary into an array based on its key
     NSMutableArray *array = [[NSMutableArray alloc] initWithCapacity:[[numberDictionary allKeys] count]];
-
-    
     for ( NSUInteger i = 0; i < [[numberDictionary allKeys] count]; i++){
         [array insertObject:[numberDictionary objectForKey: [NSString stringWithFormat:@"%d",i+1]]
                                    atIndex:i];

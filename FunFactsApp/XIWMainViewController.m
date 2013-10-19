@@ -19,6 +19,7 @@
 {
     if (!_mainManager) {
         NSData *numberData = [XIWWebRequestManager dataFromString:DATA_URL];
+        //If web request manager returns nil, no internet connection is detected so display an alert.
         if (!numberData){
             UIAlertView *noConnectionAlert = [[UIAlertView alloc] initWithTitle:@"Error"
                                                                         message:@"No valid internet connection detected. Please connect to the internet and try again."
@@ -36,7 +37,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-
+    self.navigationController.navigationBar.translucent = NO;
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -48,23 +50,25 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+    #warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
+    #warning Incomplete method implementation.
     // Return the number of rows in the section.
     return [self.mainManager.numberDataArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
+    //Selects the table cell to use
     static NSString *CellIdentifier = @"SummaryCell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     
+    //Set cell content
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
     }
@@ -120,7 +124,7 @@
 // In a story board-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-
+    //Passes information to the next view
     if ([[segue identifier] isEqualToString:@"ShowNumberDataDetails"])
     {
         // Get the new view controller using [segue destinationViewController].

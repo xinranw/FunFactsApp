@@ -22,6 +22,8 @@
     [super viewDidLoad];
     self.numberDataModel = [[XIWNumberDataModel alloc] initWithId:numberDataDictionary];
 
+    self.navigationController.navigationBar.translucent = NO;
+
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -65,13 +67,8 @@
     
     UILabel *typeLabel = (id)[cell viewWithTag: 5];
     typeLabel.text = [NSString stringWithFormat:@"Type: %@", self.numberDataModel.type];
-    
-//    UILabel *textLabel = (id)[cell viewWithTag: 6];
-//    textLabel.numberOfLines = 0;
-//    textLabel.text = [NSString stringWithFormat:@"Text: %@", self.numberDataModel.text];
-//    [textLabel sizeToFit];
-    
-    
+
+    //Set up the cell for text to have dynamic height
     CGRect screenRect = [[UIScreen mainScreen] bounds];
     CGFloat labelWidth = screenRect.size.width - 40;
     

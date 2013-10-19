@@ -12,6 +12,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="sectionIndexTrackingBackgroundColor" red="0.98823535442352295" green="0.58431375026702881" blue="0.12549020349979401" alpha="1" colorSpace="deviceRGB"/>
                         <prototypes>
                             <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="SummaryCell" rowHeight="63" id="ERb-bN-L7c">
                                 <rect key="frame" x="0.0" y="86" width="320" height="63"/>
@@ -35,25 +36,26 @@
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Numbers API Trivia!" id="KAp-mA-Nia"/>
+                    <keyCommands/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="peG-gq-iBP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="184" y="-18"/>
         </scene>
-        <!--Data View Controller-->
+        <!--Data View Controller - Trivia Data-->
         <scene sceneID="LCt-dR-Plj">
             <objects>
                 <tableViewController id="n45-6B-I3p" customClass="XIWDataViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="435" sectionHeaderHeight="22" sectionFooterHeight="22" id="S1e-8F-1Cv">
+                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" userInteractionEnabled="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" showsSelectionImmediatelyOnTouchBegin="NO" rowHeight="248" sectionHeaderHeight="22" sectionFooterHeight="22" id="S1e-8F-1Cv">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.9882352941176471" green="0.58431372549019611" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NumberDataCell" rowHeight="435" id="e11-5Y-Lft">
-                                <rect key="frame" x="0.0" y="86" width="320" height="435"/>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="NumberDataCell" rowHeight="248" id="e11-5Y-Lft">
+                                <rect key="frame" x="0.0" y="86" width="320" height="248"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="e11-5Y-Lft" id="nFe-Vk-uOI">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="434"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="320" height="248"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" tag="3" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Number: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pZo-jQ-90m">
@@ -77,6 +79,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" image="YES" notEnabled="YES"/>
+                                </accessibility>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -84,11 +89,11 @@
                             <outlet property="delegate" destination="n45-6B-I3p" id="i47-ym-Q5p"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="omV-jh-eDM"/>
+                    <navigationItem key="navigationItem" title="Trivia Data" id="omV-jh-eDM"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rdJ-Jt-h70" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="713" y="-19"/>
+            <point key="canvasLocation" x="729" y="-23"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="ofJ-66-c3X">
